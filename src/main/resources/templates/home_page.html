@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"> <!--Adding dependency, since we are using thymeleaf feature-->
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to Share Feeds</title>
+    <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css" />
+
+</head>
+<body>
+    <div class="container-fluid p-3 bg-dark text-white text-center" >
+        <div>
+            <h1><i>Welcome to Share Feeds</i></h1>
+        </div>
+    </div>
+    <div class="container-fluid p-3  text-white text-center" style="background-color:#d1d1e0;">
+        <div>
+            <h3><a th:href = "@{/register}">Register</a></h3> <!--hitting the "register" API -->
+        </div>
+
+        <div>
+            <h3><a th:href = "@{/login}">Login</a></h3> <!--hitting the "login" API -->
+        </div>
+    </div>
+</body>
+</html>

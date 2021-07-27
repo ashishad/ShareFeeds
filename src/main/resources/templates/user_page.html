@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"> <!--Adding dependency, since we are using thymeleaf feature-->
+<head>
+  <meta charset="UTF-8">
+  <title>Feeds</title>
+  <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css" />
+</head>
+<body>
+  <div class="container-fluid p-3 bg-dark text-white text-center">
+    <h1>Here are some feeds!</h1>
+  </div>
+
+  <div class="container-fluid p-3">
+    <table style=" border: 1px solid black; width: 100%;">
+      <tr th:each="feed: ${feeds}" style=" border: 1px solid black;">
+        <td th:text="${feed.post}" align="center" style="font-style: italic;"></td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="container-fluid p-3  text-white text-center" style="background-color:#d1d1e0;">
+  <div>
+    <h3><a th:href = "@{/logout}">Logout</a></h3>
+  </div>
+
+    <div>
+    <h3><a th:href = "@{/create_post}">Create post</a></h3>
+  </div>
+</div>
+</body>
+</html>

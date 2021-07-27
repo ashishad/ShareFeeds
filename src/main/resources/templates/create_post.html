@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Create your post</title>
+    <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css" />
+</head>
+<body>
+<div class="container text-center">
+    <div>
+        <h1>Create your post</h1>
+    </div>
+
+    <form th:action="@{/post_feed}" method="post" th:object="${feed}">
+        <div>
+            <div class="form-group row">
+                <label>post</label>
+                <input type="text" class="form-control" th:field="*{post}" required maxlength="200"/>
+            </div>
+
+            <div>
+                <button type="submit" class="btn btn-primary">post</button>
+            </div>
+
+        </div>
+
+    </form>
+</div>
+</body>
+</html>
